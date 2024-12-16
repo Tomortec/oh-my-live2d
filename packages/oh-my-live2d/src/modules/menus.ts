@@ -119,7 +119,7 @@ export class Menus {
       };
 
       // 适配移动端交互
-      let timer: number;
+      let timer: number | NodeJS.Timeout;
 
       stageElement.ontouchend = (): void => {
         clearTimeout(timer);

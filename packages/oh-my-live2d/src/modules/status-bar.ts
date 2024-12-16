@@ -16,7 +16,7 @@ export class StatusBar {
   element?: HTMLElement;
 
   private style: CSSProperties = {};
-  private timer = 0;
+  private timer: number | NodeJS.Timeout = 0;
   private status = false;
   constructor(private options: DefaultOptions) {}
 

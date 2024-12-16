@@ -1,3 +1,5 @@
+import { JSONObject, ModelSettings } from 'pixi-live2d-display';
+
 import { CommonStyleType } from '../common.js';
 
 /**
@@ -17,7 +19,7 @@ export interface ModelOptions {
   /**
    * 模型的 json 文件 url 地址, 必填项, 当 path 为数组时, 表示该模型有一系列皮肤可以切换
    */
-  path: string | string[];
+  path: string | string[] | JSONObject | ModelSettings;
   /**
    * 模型的缩放比例
    * @default 0.1

@@ -260,7 +260,7 @@ export class OhMyLive2D implements Oml2dProperties, Oml2dMethods, Oml2dEvents {
     const path = this.options.models[this.modelIndex].path;
 
     if (isArray(this.options.models[this.modelIndex].path) && this.options.models.length) {
-      if (++this.modelClothesIndex >= path.length) {
+      if (++this.modelClothesIndex >= (path as Array<string>).length) {
         this.modelClothesIndex = 0;
       }
       await this.loadModel();
